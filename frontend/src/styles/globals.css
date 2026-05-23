@@ -1,0 +1,137 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* Global styles */
+* {
+  @apply antialiased;
+}
+
+html {
+  @apply scroll-smooth;
+}
+
+body {
+  @apply bg-dark-base text-dark-primary;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  @apply w-2;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-dark-card;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-primary-500 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-primary-600;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    @apply opacity-0;
+  }
+  to {
+    @apply opacity-100;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    @apply opacity-0 translate-y-4;
+  }
+  to {
+    @apply opacity-100 translate-y-0;
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    @apply opacity-100;
+  }
+  50% {
+    @apply opacity-50;
+  }
+}
+
+.animate-fade-in {
+  @apply animate-fade-in;
+  animation-duration: 0.5s;
+}
+
+.animate-slide-up {
+  @apply animate-slide-up;
+  animation-duration: 0.5s;
+}
+
+/* Glass effect */
+.glass {
+  @apply bg-dark-card/80 backdrop-blur-md border border-dark-border rounded-lg;
+}
+
+/* Gradient backgrounds */
+.gradient-primary {
+  @apply bg-gradient-to-r from-primary-500 to-accent-pink;
+}
+
+.gradient-dark {
+  @apply bg-gradient-to-b from-dark-card to-dark-bg;
+}
+
+/* Card styles */
+.card {
+  @apply bg-dark-card border border-dark-border rounded-lg p-4 transition-all duration-300 hover:border-primary-500;
+}
+
+.card-interactive {
+  @apply card cursor-pointer hover:shadow-lg hover:shadow-primary-500/10;
+}
+
+/* Button styles */
+.btn {
+  @apply px-4 py-2 rounded-lg font-medium transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary-500;
+}
+
+.btn-primary {
+  @apply btn gradient-primary text-white hover:shadow-lg hover:shadow-primary-500/50;
+}
+
+.btn-secondary {
+  @apply btn bg-dark-card border border-dark-border text-dark-primary hover:bg-dark-hover;
+}
+
+.btn-icon {
+  @apply w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300;
+}
+
+/* Input styles */
+.input {
+  @apply bg-dark-card border border-dark-border rounded-lg px-4 py-2 text-dark-primary placeholder-dark-secondary focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent;
+}
+
+/* Typography */
+.text-gradient {
+  @apply bg-gradient-to-r from-primary-500 to-accent-pink bg-clip-text text-transparent;
+}
+
+.heading-lg {
+  @apply text-4xl font-bold text-dark-primary;
+}
+
+.heading-md {
+  @apply text-2xl font-bold text-dark-primary;
+}
+
+.heading-sm {
+  @apply text-xl font-semibold text-dark-primary;
+}
+
+.text-muted {
+  @apply text-dark-secondary text-sm;
+}
