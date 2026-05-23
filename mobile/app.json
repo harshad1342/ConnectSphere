@@ -1,0 +1,39 @@
+{
+  "expo": {
+    "name": "ConnectSphere",
+    "slug": "connectsphere",
+    "version": "1.0.0",
+    "scheme": "connectsphere",
+    "platforms": ["ios", "android", "web"],
+    "ios": {
+      "supportsTabletMode": true,
+      "bundleIdentifier": "com.connectsphere.app"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#0f0f0f"
+      },
+      "package": "com.connectsphere.app"
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "static",
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Allow ConnectSphere to access your photos",
+          "cameraPermission": "Allow ConnectSphere to access your camera"
+        }
+      ]
+    ],
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#0f0f0f"
+    }
+  }
+}
